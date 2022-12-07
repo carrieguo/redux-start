@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import {createStore} from 'redux';
+
+import { 
+  addAction,
+  squareAction} from './actions/actions'
+
+import math from './reducers/math'
+
+const store = createStore(math);
+
+console.log(store.getState())
+store.dispatch(addAction(1))
+console.log(store.getState()) //10+1
+
+store.dispatch(addAction(2))
+console.log(store.getState()) //11+2
+
+store.dispatch(squareAction())
+console.log(store.getState()) //13*13
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      123
     </div>
   );
 }

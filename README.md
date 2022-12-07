@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+##note
+
+1. store 存放数据的仓库
+2. state 数据仓库中存储的数据
+3. action 对象：
+4. dispatch 唯一更改state的方法
+5. reduer函数： 
