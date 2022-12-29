@@ -5,6 +5,8 @@ const math = (state=10, action)=>{
       return state + action.num
     case 'SQUARE':
       return state * state;
+    case 'get':
+      return action.num;
     default:
       return state;
   }

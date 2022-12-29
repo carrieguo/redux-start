@@ -25,8 +25,20 @@ const squareAction = () => {
     type: SQUARE
   }
 }
+//异步请求处理
+const getAction = () =>{
+ return (dispatch, getState)=>{
+  fetch('./data.json').then(res=>res.json()).then(res=>{
+    dispatch({
+      type: 'get',
+      num:res[0]
+    })
+  })
+ }
+}
 
 export {
   addAction,
-  squareAction
+  squareAction,
+  getAction
 }
